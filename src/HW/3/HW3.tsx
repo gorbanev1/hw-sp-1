@@ -37,7 +37,9 @@ export const HW3 = () => {
         handleChange(e)
       }} />
 
-      <button id={'hw03-button'} onClick={() => {}}> // НЕ ХВАТАТЕТ ФУНКЦИИ
+      <button id={'hw03-button'} onClick={() => {
+        setTexts([currentText, ...texts])
+      }}> // НЕ ХВАТАТЕТ ФУНКЦИИ
         Сохранить
       </button>
 
