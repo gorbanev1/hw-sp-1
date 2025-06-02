@@ -1,4 +1,4 @@
-import {ChangeEvent, useState} from 'react';
+import { useState } from 'react';
 import s from './HW4.module.css';
 import { Button } from './Button';
 import { Input } from './Input';
@@ -20,38 +20,34 @@ export const HW4 = () => {
   ]);
 
   const handleSave = () => {
-    debugger
     setTexts([currentText, ...texts]);
     setCurrentText('');
   };
-  const changeTaskTitleValue =(e:ChangeEvent<HTMLInputElement>)=>{
-    setCurrentText(e.currentTarget.value)
-  }
 
   return (
-      <div id={'hw04'}>
-        {currentText ? (
-            <h1 id={'hw04-text'}>{currentText}</h1>
-        ) : (
-            <h1 id={'hw04-default-text'}> Здесь появится новое дело</h1>
-        )}
+    <div id={'hw04'}>
+      {/*{currentText ? (*/}
+      {/*  <h1 id={'hw04-text'}>{currentText}</h1>*/}
+      {/*) : (*/}
+      {/*  <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>*/}
+      {/*)}*/}
 
-        <Input currentText={currentText} setCurrentText={setCurrentText}></Input>
+      {/*<Input НЕ ХВАТАЕТ АРГУМЕНТОВ />*/}
 
-        <Button callBack={handleSave} name={"Add"} />
+      {/*<Button НЕ ХВАТАЕТ АРГУМЕНТОВ />*/}
 
-        <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
+      {/*<h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>*/}
 
-        <ol id={'hw04-tasks'}>
-          {texts.map((el, index) => {
-            return (
-                <li key={index} id={`hw04-task-${index}`} className={index%2 ? s.chetNechet : ''}>
-                  {el}
-                </li>
-            );
-          })}
-        </ol>
-      </div>
+      {/*<ol id={'hw04-tasks'}>*/}
+      {/*  {texts.map((el, index) => {*/}
+      {/*    return (*/}
+      {/*      <li key={index} id={`hw04-task-${index}`} className={ЕСЛИ ЧЕТН ? S.chetNechet : ''}>*/}
+      {/*        {el}*/}
+      {/*      </li>*/}
+      {/*    );*/}
+      {/*  })}*/}
+      {/*</ol>*/}
+    </div>
   );
 };
 
